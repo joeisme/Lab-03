@@ -1,0 +1,21 @@
+void setup() {
+  // put your setup code here, to run once:
+  Serial.begin(9600);
+  pinMode(14,OUTPUT);
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+if(Serial . available())
+{Serial.write("HELLO,");
+  char v=Serial.read();
+  if(v=='1')
+  {digitalWrite(8,1);
+  Serial.write("LED ON\n");}
+  else if (v=='0')
+  {
+    digitalWrite(8,0);
+     Serial.write("LED Off\n");}
+  }
+  }
+
